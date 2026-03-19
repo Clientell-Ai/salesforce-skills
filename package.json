@@ -1,0 +1,57 @@
+{
+  "name": "@clientell/salesforce-skills",
+  "version": "1.0.0",
+  "description": "Salesforce development skills for AI coding agents — Apex, Flows, LWC, SOQL, security, deployments, and more. Works with Claude Code, Cursor, Codex, and 50+ AI tools.",
+  "keywords": [
+    "agent-skills",
+    "agentskills",
+    "salesforce",
+    "apex",
+    "lwc",
+    "soql",
+    "sosl",
+    "claude-code",
+    "cursor",
+    "codex",
+    "ai-coding",
+    "salesforce-dx",
+    "flow",
+    "lightning-web-components",
+    "salesforce-cli",
+    "sfdx",
+    "process-builder",
+    "appexchange",
+    "security-review",
+    "crud-fls",
+    "governor-limits",
+    "test-class",
+    "code-coverage",
+    "deployment",
+    "ci-cd",
+    "bulk-api",
+    "data-migration",
+    "permission-sets",
+    "custom-metadata",
+    "salesforce-skills"
+  ],
+  "author": "Clientell",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/clientell/salesforce-skills.git"
+  },
+  "homepage": "https://github.com/clientell/salesforce-skills",
+  "bugs": {
+    "url": "https://github.com/clientell/salesforce-skills/issues"
+  },
+  "files": [
+    "skills/",
+    ".agents/",
+    ".claude/",
+    "references/",
+    "scripts/",
+    "AGENTS.md",
+    "CLAUDE.md",
+    "install.sh"
+  ]
+}

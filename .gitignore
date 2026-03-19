@@ -1,0 +1,9 @@
+node_modules/
+.sfdx/
+.sf/
+*.log
+.DS_Store
+.env
+credentials.json
+server.key
+.skill-lock.json
