@@ -38,11 +38,11 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/clientell/salesforce-skills.git"
+    "url": "https://github.com/Clientell-Ai/salesforce-skills.git"
   },
-  "homepage": "https://github.com/clientell/salesforce-skills",
+  "homepage": "https://github.com/Clientell-Ai/salesforce-skills",
   "bugs": {
-    "url": "https://github.com/clientell/salesforce-skills/issues"
+    "url": "https://github.com/Clientell-Ai/salesforce-skills/issues"
   },
   "files": [
     "skills/",

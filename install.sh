@@ -4,7 +4,7 @@
 # Supports: Claude Code, Cursor, Codex, Gemini CLI, and 50+ AI tools
 #
 # Usage:
-#   npx skills add clientell/salesforce-skills    # Recommended
+#   npx skills add Clientell-Ai/salesforce-skills    # Recommended
 #   ./install.sh [target-project-dir]             # Manual install
 #   ./install.sh --help                           # Show help
 #
@@ -31,7 +31,7 @@ while [[ $# -gt 0 ]]; do
             echo "Installs Salesforce development skills for Claude Code, Cursor,"
             echo "Codex, and 50+ other AI coding agents."
             echo ""
-            echo "Recommended: npx skills add clientell/salesforce-skills"
+            echo "Recommended: npx skills add Clientell-Ai/salesforce-skills"
             echo ""
             echo "Skills installed:"
             echo "  sf-apex      Apex code generation & review"
@@ -173,4 +173,4 @@ echo "  1. Install SF CLI: npm install @salesforce/cli -g"
 echo "  2. Authenticate: sf org login web --alias myOrg"
 echo "  3. Start using: claude (then type /sf-find for guidance)"
 echo ""
-echo "Alternative install: npx skills add clientell/salesforce-skills"
+echo "Alternative install: npx skills add Clientell-Ai/salesforce-skills"

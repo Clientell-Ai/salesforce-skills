@@ -12,7 +12,7 @@ Works with **Claude Code, Cursor, Codex, Gemini CLI, VS Code Copilot**, and [50+
 ## Quick Start
 
 ```bash
-npx skills add clientell/salesforce-skills
+npx skills add Clientell-Ai/salesforce-skills
 ```
 
 That's it. All 10 skills are now available in your AI coding agent.
@@ -20,28 +20,28 @@ That's it. All 10 skills are now available in your AI coding agent.
 ## Install Individual Skills
 
 ```bash
-npx skills add clientell/salesforce-skills@sf-apex       # Apex code generation & review
-npx skills add clientell/salesforce-skills@sf-test       # Test class generation
-npx skills add clientell/salesforce-skills@sf-flow       # Flow generation & PB migration
-npx skills add clientell/salesforce-skills@sf-lwc        # LWC scaffolding
-npx skills add clientell/salesforce-skills@sf-soql       # SOQL/SOSL query building
-npx skills add clientell/salesforce-skills@sf-security   # Security & AppExchange audit
-npx skills add clientell/salesforce-skills@sf-deploy     # Deployment orchestration & CI/CD
-npx skills add clientell/salesforce-skills@sf-data       # Data migration & bulk operations
-npx skills add clientell/salesforce-skills@sf-schema     # Schema & permission management
-npx skills add clientell/salesforce-skills@sf-find       # Skill discovery
+npx skills add Clientell-Ai/salesforce-skills@sf-apex       # Apex code generation & review
+npx skills add Clientell-Ai/salesforce-skills@sf-test       # Test class generation
+npx skills add Clientell-Ai/salesforce-skills@sf-flow       # Flow generation & PB migration
+npx skills add Clientell-Ai/salesforce-skills@sf-lwc        # LWC scaffolding
+npx skills add Clientell-Ai/salesforce-skills@sf-soql       # SOQL/SOSL query building
+npx skills add Clientell-Ai/salesforce-skills@sf-security   # Security & AppExchange audit
+npx skills add Clientell-Ai/salesforce-skills@sf-deploy     # Deployment orchestration & CI/CD
+npx skills add Clientell-Ai/salesforce-skills@sf-data       # Data migration & bulk operations
+npx skills add Clientell-Ai/salesforce-skills@sf-schema     # Schema & permission management
+npx skills add Clientell-Ai/salesforce-skills@sf-find       # Skill discovery
 ```
 
 ### Install globally (all projects)
 
 ```bash
-npx skills add clientell/salesforce-skills -g
+npx skills add Clientell-Ai/salesforce-skills -g
 ```
 
 ### Manual installation
 
 ```bash
-git clone https://github.com/clientell/salesforce-skills.git
+git clone https://github.com/Clientell-Ai/salesforce-skills.git
 cd salesforce-skills
 ./install.sh /path/to/your/salesforce-project
 ```

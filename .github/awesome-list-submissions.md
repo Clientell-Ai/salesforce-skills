@@ -11,7 +11,7 @@ Use these ready-to-go snippets when submitting PRs to awesome-agent-skills lists
 **Entry to add (find the appropriate section):**
 
 ```markdown
-- [Salesforce Skills](https://github.com/clientell/salesforce-skills) - 10 production-ready skills for Salesforce development: Apex generation, test classes, Flow/PB migration, LWC scaffolding, SOQL/SOSL optimization, security auditing, deployment orchestration, data migration, schema management. Includes governor limit awareness, CRUD/FLS compliance, and AppExchange review readiness.
+- [Salesforce Skills](https://github.com/Clientell-Ai/salesforce-skills) - 10 production-ready skills for Salesforce development: Apex generation, test classes, Flow/PB migration, LWC scaffolding, SOQL/SOSL optimization, security auditing, deployment orchestration, data migration, schema management. Includes governor limit awareness, CRUD/FLS compliance, and AppExchange review readiness.
 ```
 
 ---
@@ -21,7 +21,7 @@ Use these ready-to-go snippets when submitting PRs to awesome-agent-skills lists
 **Entry:**
 
 ```markdown
-- [Salesforce Skills](https://github.com/clientell/salesforce-skills) — Comprehensive Salesforce development toolkit (10 skills). Apex code generation with async patterns, test class generation with bulk/permission/callout testing, Flow metadata XML generation, LWC scaffolding with LDS/LMS, SOQL/SOSL optimization, security auditing for AppExchange, deployment orchestration with scratch orgs/packages, data migration with Bulk API 2.0, schema metadata generation. Apache-2.0.
+- [Salesforce Skills](https://github.com/Clientell-Ai/salesforce-skills) — Comprehensive Salesforce development toolkit (10 skills). Apex code generation with async patterns, test class generation with bulk/permission/callout testing, Flow metadata XML generation, LWC scaffolding with LDS/LMS, SOQL/SOSL optimization, security auditing for AppExchange, deployment orchestration with scratch orgs/packages, data migration with Bulk API 2.0, schema metadata generation. Apache-2.0.
 ```
 
 ---
@@ -32,7 +32,7 @@ Use these ready-to-go snippets when submitting PRs to awesome-agent-skills lists
 
 ```markdown
 ### Salesforce
-- [salesforce-skills](https://github.com/clientell/salesforce-skills) - 10 skills covering the full Salesforce development lifecycle. `npx skills add clientell/salesforce-skills`
+- [salesforce-skills](https://github.com/Clientell-Ai/salesforce-skills) - 10 skills covering the full Salesforce development lifecycle. `npx skills add Clientell-Ai/salesforce-skills`
   - `sf-apex` — Apex generation with governor limits, bulkification, async patterns
   - `sf-test` — Test classes with 200-record bulk, permission, callout mock testing
   - `sf-flow` — Flow XML generation, Process Builder migration
@@ -52,7 +52,7 @@ Use these ready-to-go snippets when submitting PRs to awesome-agent-skills lists
 **Entry:**
 
 ```markdown
-- [Salesforce Skills](https://github.com/clientell/salesforce-skills) - Production-ready Agent Skills for Salesforce development. 10 skills covering Apex, testing, Flows, LWC, SOQL, security, deployment, data migration, and schema management. Works with Claude Code, Cursor, Codex, and 50+ AI tools.
+- [Salesforce Skills](https://github.com/Clientell-Ai/salesforce-skills) - Production-ready Agent Skills for Salesforce development. 10 skills covering Apex, testing, Flows, LWC, SOQL, security, deployment, data migration, and schema management. Works with Claude Code, Cursor, Codex, and 50+ AI tools.
 ```
 
 ---
