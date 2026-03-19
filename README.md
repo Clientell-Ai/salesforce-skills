@@ -1,3 +1,5 @@
+[![Clientell](assets/logo.svg)](https://getclientell.com)
+
 # Salesforce Skills for AI Coding Agents
 
 [![License: Apache-2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
@@ -169,4 +171,4 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for how to add new skills, improve existi
 
 Apache-2.0 — see [LICENSE](LICENSE).
 
-Built by [Clientell](https://clientell.io).
+Built by [Clientell](https://getclientell.com).
