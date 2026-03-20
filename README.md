@@ -141,6 +141,39 @@ Update `CLAUDE.md` in your Salesforce project with org-specific conventions:
 - Deployment targets
 - Team coding standards
 
+## Benchmark: Do Skills Actually Help?
+
+Yes. Across 15 tasks, skills improve AI-generated Salesforce code by **+108%** (10.3 → 21.4 out of 25).
+
+| Category | Without Skills | With Skills | Improvement |
+|----------|:---:|:---:|:---:|
+| **Security** | 1.5/5 | 4.5/5 | +200% |
+| **Governor Limits** | 2.5/5 | 4.4/5 | +76% |
+| **Bulkification** | 2.1/5 | 4.3/5 | +105% |
+| **Patterns** | 2.1/5 | 4.2/5 | +100% |
+| **Completeness** | 2.1/5 | 4.0/5 | +90% |
+| **Total** | **10.3/25 (41%)** | **21.4/25 (86%)** | **+108%** |
+
+> Scored by Claude as judge against a [Salesforce-specific rubric](evals/benchmarks/rubric.md) across [15 tasks](evals/benchmarks/tasks.json).
+> [Full results with per-task breakdown](evals/benchmarks/results/BENCHMARK.md) | [Run it yourself](#evaluate-yourself)
+
+### Evaluate Yourself
+
+```bash
+# In Claude Code — run the benchmark interactively
+/sf-eval
+
+# Run a single task
+/sf-eval apex-trigger-bulk
+
+# Static analysis on your own code (no LLM needed)
+bash evals/checks/static-checks.sh MyClass.cls
+
+# Headless benchmark (requires API key)
+export ANTHROPIC_API_KEY="sk-ant-..."
+bash evals/benchmarks/run-benchmark.sh
+```
+
 ## Project Structure
 
 ```
@@ -155,7 +188,8 @@ salesforce-skills/
 │   ├── sf-deploy/           # Deploy + 1 reference file
 │   ├── sf-data/             # Data + 1 reference file
 │   ├── sf-schema/           # Schema + 1 reference file
-│   └── sf-find/             # Discovery
+│   ├── sf-find/             # Discovery
+│   └── sf-eval/             # Skill evaluation & benchmarking
 ├── .agents/skills/          # Cross-client symlinks
 ├── .claude/                 # Claude Code config + agents
 ├── references/              # Shared reference docs

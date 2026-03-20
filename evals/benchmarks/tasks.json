@@ -1,0 +1,92 @@
+[
+  {
+    "id": "apex-trigger-bulk",
+    "skill": "sf-apex",
+    "prompt": "Write an Apex trigger on Account that when an Account's BillingCity changes, updates the MailingCity of all related Contacts to match. Include the trigger and handler class.",
+    "criteria": ["bulkification", "security", "governor-limits", "trigger-pattern"]
+  },
+  {
+    "id": "apex-batch-cleanup",
+    "skill": "sf-apex",
+    "prompt": "Write a Batch Apex class that finds all Lead records with Status 'Open' that haven't been modified in 90 days, sets their Status to 'Stale', and sends a summary email to the admin when done. Handle errors gracefully.",
+    "criteria": ["bulkification", "governor-limits", "error-handling", "patterns"]
+  },
+  {
+    "id": "apex-rest-api",
+    "skill": "sf-apex",
+    "prompt": "Create an Apex REST API endpoint at /services/apexrest/accounts that supports GET (search by name), POST (create account), and PATCH (update account fields). Return proper HTTP status codes and error messages.",
+    "criteria": ["security", "governor-limits", "error-handling", "patterns"]
+  },
+  {
+    "id": "apex-callout-service",
+    "skill": "sf-apex",
+    "prompt": "Write an Apex service class that makes a REST callout to an external API endpoint to sync Account data. Use Named Credentials for authentication, handle HTTP errors, and make it callable from a trigger via a Queueable job.",
+    "criteria": ["security", "patterns", "error-handling", "async-pattern"]
+  },
+  {
+    "id": "test-trigger-handler",
+    "skill": "sf-test",
+    "prompt": "Write a comprehensive test class for an AccountTriggerHandler that has beforeInsert (sets default Industry) and afterUpdate (syncs BillingCity to Contact MailingCity) methods. Include positive, negative, bulk, and permission tests.",
+    "criteria": ["test-coverage", "bulkification", "test-patterns", "assertions"]
+  },
+  {
+    "id": "test-callout-mock",
+    "skill": "sf-test",
+    "prompt": "Write a test class for a service that makes HTTP callouts to an external API. The service has methods for GET and POST. Include mock implementations for success (200), client error (400), and server error (500) scenarios.",
+    "criteria": ["test-patterns", "mock-patterns", "assertions", "completeness"]
+  },
+  {
+    "id": "soql-complex-query",
+    "skill": "sf-soql",
+    "prompt": "Write a SOQL query that gets all Accounts in the Technology industry that have at least 3 Opportunities worth more than $50,000 each that closed this fiscal year. Include the Account name, total opportunity amount, and count. Optimize for performance.",
+    "criteria": ["security", "governor-limits", "optimization", "completeness"]
+  },
+  {
+    "id": "soql-dynamic-search",
+    "skill": "sf-soql",
+    "prompt": "Write an Apex method that builds a dynamic SOQL query for a search page. Users can filter Accounts by Name (partial match), Industry (exact), AnnualRevenue (greater than), and CreatedDate (after date). All filters are optional. Make it secure.",
+    "criteria": ["security", "injection-prevention", "governor-limits", "patterns"]
+  },
+  {
+    "id": "lwc-record-list",
+    "skill": "sf-lwc",
+    "prompt": "Create a Lightning Web Component that displays a list of Contacts for the current Account record page. Include sorting by Name and Email, a search filter, inline editing of Phone field, and a 'New Contact' button. Use proper error and loading states.",
+    "criteria": ["lds-patterns", "error-handling", "accessibility", "completeness"]
+  },
+  {
+    "id": "flow-opportunity-automation",
+    "skill": "sf-flow",
+    "prompt": "Generate the Flow metadata XML for a record-triggered after-save flow on Opportunity. When StageName changes to 'Closed Won', create a Task for the Account owner with subject 'Follow up on won deal', and update a custom field Won_Date__c on the Account. Include bypass logic and error handling.",
+    "criteria": ["bypass-pattern", "error-handling", "flow-best-practices", "completeness"]
+  },
+  {
+    "id": "security-audit-apex",
+    "skill": "sf-security",
+    "prompt": "Review this Apex class for security issues and fix them:\n\npublic class AccountService {\n    public static List<Account> searchAccounts(String searchTerm) {\n        String query = 'SELECT Id, Name, Phone, SSN__c FROM Account WHERE Name LIKE \\'%' + searchTerm + '%\\'';\n        return Database.query(query);\n    }\n    \n    public static void updateAccounts(List<Account> accounts) {\n        update accounts;\n    }\n}",
+    "criteria": ["injection-prevention", "crud-fls", "sharing-model", "pii-protection"]
+  },
+  {
+    "id": "schema-custom-object",
+    "skill": "sf-schema",
+    "prompt": "Create the SFDX source format metadata XML for a custom object called Invoice__c with: auto-number Name field (INV-{000000}), Currency field Amount__c (required), Lookup to Account, Picklist Status__c (Draft/Sent/Paid/Overdue), Date field Due_Date__c, and a validation rule that Amount must be positive. Include a permission set for Invoice managers.",
+    "criteria": ["metadata-format", "field-types", "validation-rules", "permissions"]
+  },
+  {
+    "id": "deploy-cicd-pipeline",
+    "skill": "sf-deploy",
+    "prompt": "Create a GitHub Actions CI/CD pipeline for Salesforce that: authenticates via JWT on pull requests, runs Salesforce Code Analyzer, validates deployment with RunLocalTests, and on merge to main, deploys to production. Include proper secret handling.",
+    "criteria": ["auth-patterns", "test-levels", "error-handling", "completeness"]
+  },
+  {
+    "id": "data-migration-plan",
+    "skill": "sf-data",
+    "prompt": "Write a data migration script/plan to load 50,000 Account records and their related Contacts (3 per Account = 150,000 Contacts) from CSV files into a Salesforce sandbox. Accounts have an External_Id__c field. Handle errors and preserve relationships.",
+    "criteria": ["bulk-api", "relationship-order", "external-ids", "error-handling"]
+  },
+  {
+    "id": "apex-platform-events",
+    "skill": "sf-apex",
+    "prompt": "Create a Platform Event-based architecture for order processing. Define the Order_Event__e event, write a publisher class that fires events when Orders are created, and a subscriber trigger that creates Tasks for fulfillment. Handle failures with replay ID checkpointing.",
+    "criteria": ["async-pattern", "error-handling", "idempotency", "patterns"]
+  }
+]

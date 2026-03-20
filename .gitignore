@@ -7,3 +7,8 @@ node_modules/
 credentials.json
 server.key
 .skill-lock.json
+evals/benchmarks/results/*.txt
+evals/benchmarks/results/*.json
+evals/benchmarks/results/*.md
+!evals/benchmarks/results/.gitkeep
+!evals/benchmarks/results/BENCHMARK.md
