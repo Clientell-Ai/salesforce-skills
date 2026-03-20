@@ -17,7 +17,7 @@ Works with **Claude Code, Cursor, Codex, Gemini CLI, VS Code Copilot**, and [50+
 npx skills add Clientell-Ai/salesforce-skills
 ```
 
-That's it. All 10 skills are now available in your AI coding agent.
+That's it. All 18 skills are now available in your AI coding agent.
 
 ## Install Individual Skills
 
@@ -31,6 +31,13 @@ npx skills add Clientell-Ai/salesforce-skills@sf-security   # Security & AppExch
 npx skills add Clientell-Ai/salesforce-skills@sf-deploy     # Deployment orchestration & CI/CD
 npx skills add Clientell-Ai/salesforce-skills@sf-data       # Data migration & bulk operations
 npx skills add Clientell-Ai/salesforce-skills@sf-schema     # Schema & permission management
+npx skills add Clientell-Ai/salesforce-skills@sf-debug      # Debug log analysis & troubleshooting
+npx skills add Clientell-Ai/salesforce-skills@sf-agentforce # Agentforce agents, topics & actions
+npx skills add Clientell-Ai/salesforce-skills@sf-permissions # Permission sets & access auditing
+npx skills add Clientell-Ai/salesforce-skills@sf-integration # Named Credentials, OAuth, Platform Events
+npx skills add Clientell-Ai/salesforce-skills@sf-docs       # Salesforce documentation navigator
+npx skills add Clientell-Ai/salesforce-skills@sf-diagram    # Mermaid diagrams from metadata
+npx skills add Clientell-Ai/salesforce-skills@sf-omnistudio # OmniStudio (OmniScripts, FlexCards, IPs)
 npx skills add Clientell-Ai/salesforce-skills@sf-find       # Skill discovery
 ```
 
@@ -188,6 +195,13 @@ salesforce-skills/
 │   ├── sf-deploy/           # Deploy + 1 reference file
 │   ├── sf-data/             # Data + 1 reference file
 │   ├── sf-schema/           # Schema + 1 reference file
+│   ├── sf-debug/            # Debug log analysis & troubleshooting
+│   ├── sf-agentforce/       # Agentforce agents, topics & actions
+│   ├── sf-permissions/      # Permission sets & access auditing
+│   ├── sf-integration/      # Named Credentials, OAuth, Platform Events
+│   ├── sf-docs/             # Salesforce documentation navigator
+│   ├── sf-diagram/          # Mermaid diagrams from metadata
+│   ├── sf-omnistudio/       # OmniStudio (OmniScripts, FlexCards, IPs)
 │   ├── sf-find/             # Discovery
 │   └── sf-eval/             # Skill evaluation & benchmarking
 ├── .agents/skills/          # Cross-client symlinks
