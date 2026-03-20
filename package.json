@@ -1,6 +1,6 @@
 {
   "name": "@clientellai/salesforce-skills",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Salesforce development skills for AI coding agents — Apex, Flows, LWC, SOQL, security, deployments, and more. Works with Claude Code, Cursor, Codex, and 50+ AI tools.",
   "keywords": [
     "agent-skills",
