@@ -1,0 +1,38 @@
+.stage-bar {
+    color: var(--slds-g-color-neutral-base-10, CanvasText);
+}
+
+.stage-list {
+    gap: var(--slds-g-spacing-2, 0.5rem);
+}
+
+.stage-item {
+    align-items: center;
+    display: inline-flex;
+    min-height: var(--slds-g-sizing-8, 2rem);
+}
+
+.stage-marker {
+    border-radius: var(--slds-g-radius-border-circle, 50%);
+    display: inline-block;
+    height: var(--slds-g-sizing-3, 0.75rem);
+    margin-right: var(--slds-g-spacing-1, 0.25rem);
+    width: var(--slds-g-sizing-3, 0.75rem);
+}
+
+.stage-label {
+    font-size: var(--slds-g-font-scale-neg-1, 0.75rem);
+}
+
+.stage-item_complete .stage-marker {
+    background: var(--slds-g-color-success-base-50, Highlight);
+}
+
+.stage-item_current .stage-marker {
+    background: var(--slds-g-color-brand-base-50, Highlight);
+    box-shadow: 0 0 0 var(--slds-g-sizing-border-2, 2px) var(--slds-g-color-brand-base-90, Canvas);
+}
+
+.stage-item_pending .stage-marker {
+    background: var(--slds-g-color-neutral-base-80, GrayText);
+}
