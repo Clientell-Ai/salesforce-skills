@@ -1,0 +1,54 @@
+<template>
+    <lightning-card title="Opportunity Stage" icon-name="standard:opportunity">
+        <div class="stage-ribbon slds-p-horizontal_medium slds-p-bottom_medium">
+            <template lwc:if={isLoading}>
+                <div class="state-container">
+                    <lightning-spinner alternative-text="Loading opportunity stages" size="small"></lightning-spinner>
+                </div>
+            </template>
+
+            <template lwc:elseif={hasError}>
+                <div class="slds-notify slds-notify_alert slds-alert_error" role="alert">
+                    <span class="slds-assistive-text">Error</span>
+                    <lightning-icon
+                        icon-name="utility:error"
+                        alternative-text="Error"
+                        size="x-small"
+                        variant="inverse"
+                        class="slds-m-right_x-small">
+                    </lightning-icon>
+                    <h2>{errorMessage}</h2>
+                </div>
+            </template>
+
+            <template lwc:elseif={hasStages}>
+                <div class="ribbon-scroller" role="list" aria-label="Opportunity stage path">
+                    <template for:each={stageSteps} for:item="stage">
+                        <div key={stage.value} class={stage.containerClass} role="listitem" aria-current={stage.ariaCurrent}>
+                            <span class={stage.markerClass}>
+                                <template lwc:if={stage.isCompleted}>
+                                    <lightning-icon
+                                        icon-name="utility:check"
+                                        alternative-text="Completed"
+                                        size="xx-small"
+                                        variant="inverse">
+                                    </lightning-icon>
+                                </template>
+                                <template lwc:else>
+                                    <span class="marker-number">{stage.displayIndex}</span>
+                                </template>
+                            </span>
+                            <span class="stage-label" title={stage.label}>{stage.label}</span>
+                        </div>
+                    </template>
+                </div>
+            </template>
+
+            <template lwc:else>
+                <div class="empty-state slds-text-align_center slds-text-color_weak" aria-live="polite">
+                    No stage values are available for this Opportunity record type.
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

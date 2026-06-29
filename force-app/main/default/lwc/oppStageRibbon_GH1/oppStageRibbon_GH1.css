@@ -1,0 +1,110 @@
+.stage-ribbon {
+    min-height: 4rem;
+}
+
+.state-container {
+    min-height: 3rem;
+    position: relative;
+}
+
+.ribbon-scroller {
+    display: flex;
+    overflow-x: auto;
+    padding-block: 0.25rem;
+    scrollbar-width: thin;
+}
+
+.stage-step {
+    align-items: center;
+    background: var(--slds-g-color-neutral-base-95, #f3f3f3);
+    color: var(--slds-g-color-neutral-base-30, #444444);
+    display: inline-flex;
+    flex: 1 0 10rem;
+    gap: 0.5rem;
+    min-height: 2.5rem;
+    min-width: 10rem;
+    padding: 0.5rem 1rem 0.5rem 0.75rem;
+    position: relative;
+}
+
+.stage-step::after {
+    background: inherit;
+    border-right: 1px solid var(--slds-g-color-border-base-1, #c9c9c9);
+    border-top: 1px solid var(--slds-g-color-border-base-1, #c9c9c9);
+    content: "";
+    height: 1.78rem;
+    position: absolute;
+    right: -0.88rem;
+    top: 0.36rem;
+    transform: rotate(45deg);
+    width: 1.78rem;
+    z-index: 1;
+}
+
+.stage-step + .stage-step {
+    margin-left: 0.25rem;
+    padding-left: 1.25rem;
+}
+
+.stage-step_completed {
+    background: var(--slds-g-color-success-base-50, #2e844a);
+    color: var(--slds-g-color-neutral-base-100, #ffffff);
+}
+
+.stage-step_current {
+    background: var(--slds-g-color-brand-base-50, #0176d3);
+    color: var(--slds-g-color-neutral-base-100, #ffffff);
+    font-weight: 700;
+}
+
+.stage-step_upcoming {
+    border: 1px solid var(--slds-g-color-border-base-1, #c9c9c9);
+}
+
+.stage-marker {
+    align-items: center;
+    border-radius: 50%;
+    display: inline-flex;
+    flex: 0 0 1.35rem;
+    height: 1.35rem;
+    justify-content: center;
+    position: relative;
+    width: 1.35rem;
+    z-index: 2;
+}
+
+.stage-marker_completed,
+.stage-marker_current {
+    background: var(--slds-g-color-neutral-base-100, #ffffff);
+    color: var(--slds-g-color-brand-base-50, #0176d3);
+}
+
+.stage-marker_upcoming {
+    background: var(--slds-g-color-neutral-base-100, #ffffff);
+    border: 1px solid var(--slds-g-color-border-base-1, #c9c9c9);
+    color: var(--slds-g-color-neutral-base-30, #444444);
+}
+
+.marker-number {
+    font-size: 0.75rem;
+    line-height: 1;
+}
+
+.stage-label {
+    overflow: hidden;
+    position: relative;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    z-index: 2;
+}
+
+.empty-state {
+    padding: 1rem;
+}
+
+@media (max-width: 48rem) {
+    .stage-step {
+        flex-basis: 8.5rem;
+        min-width: 8.5rem;
+    }
+}
