@@ -1,0 +1,56 @@
+.opp-stage-gauge {
+    color: var(--slds-g-color-neutral-base-10, inherit);
+}
+
+.gauge {
+    display: flex;
+    justify-content: center;
+}
+
+.gauge__track {
+    --opp-stage-gauge-progress: 0%;
+    align-items: center;
+    aspect-ratio: 2 / 1;
+    background: conic-gradient(
+        from 270deg,
+        var(--slds-g-color-brand-base-50, currentColor) 0 var(--opp-stage-gauge-progress),
+        var(--slds-g-color-neutral-base-80, transparent) var(--opp-stage-gauge-progress) 100%
+    );
+    border-radius: 999rem 999rem 0 0;
+    display: flex;
+    justify-content: center;
+    max-width: 22rem;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.gauge__track::after {
+    background: var(--slds-g-color-neutral-base-100, Canvas);
+    border-radius: 999rem 999rem 0 0;
+    bottom: 0;
+    content: '';
+    height: 72%;
+    position: absolute;
+    width: 72%;
+}
+
+.gauge__center {
+    align-items: center;
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    z-index: 1;
+}
+
+.gauge__value {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.gauge__caption,
+.custom-stage-note {
+    color: var(--slds-g-color-neutral-base-30, currentColor);
+}
