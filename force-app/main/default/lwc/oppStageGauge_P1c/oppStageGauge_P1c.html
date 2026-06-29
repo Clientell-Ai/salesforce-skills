@@ -1,0 +1,38 @@
+<template>
+    <lightning-card title="Opportunity Stage Gauge" icon-name="standard:opportunity">
+        <div class="slds-p-around_medium opp-stage-gauge">
+            <template lwc:if={hasStageData}>
+                <div class="slds-grid slds-grid_align-spread slds-grid_vertical-align-center slds-m-bottom_small">
+                    <div>
+                        <p class="slds-text-title slds-m-bottom_xx-small">Current Stage</p>
+                        <p class="slds-text-heading_small">{stageName}</p>
+                    </div>
+                    <lightning-badge label={progressLabel}></lightning-badge>
+                </div>
+
+                <div class="gauge" role="meter" aria-label={meterAriaLabel} aria-valuemin="0" aria-valuemax="100" aria-valuenow={progressValue}>
+                    <div class="gauge__track" style={gaugeStyle}>
+                        <div class="gauge__center">
+                            <span class="gauge__value">{progressLabel}</span>
+                            <span class="gauge__caption">Complete</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slds-m-top_medium">
+                    <lightning-progress-bar value={progressValue} size="large" variant={progressVariant}></lightning-progress-bar>
+                </div>
+
+                <p class={helperTextClass} aria-live="polite">{helperText}</p>
+            </template>
+
+            <template lwc:elseif={hasError}>
+                <div class="slds-text-color_error" role="alert">{errorMessage}</div>
+            </template>
+
+            <template lwc:else>
+                <lightning-spinner alternative-text="Loading opportunity stage" size="small"></lightning-spinner>
+            </template>
+        </div>
+    </lightning-card>
+</template>
