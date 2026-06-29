@@ -1,0 +1,55 @@
+<template>
+    <lightning-card title="Opportunity Stage" icon-name="standard:opportunity">
+        <div class="slds-p-horizontal_medium slds-p-bottom_medium stage-bar" aria-live="polite">
+            <template lwc:if={hasRecordId}>
+                <template lwc:if={hasStageData}>
+                    <div class="slds-grid slds-grid_align-spread slds-grid_vertical-align-center slds-m-bottom_x-small">
+                        <div>
+                            <p class="slds-text-title_caps slds-m-bottom_xx-small">Current Stage</p>
+                            <p class="slds-text-heading_small">{currentStageLabel}</p>
+                        </div>
+                        <div class="slds-text-align_right">
+                            <p class="slds-text-title_caps slds-m-bottom_xx-small">Progress</p>
+                            <p class="slds-text-heading_small">{progressLabel}</p>
+                        </div>
+                    </div>
+
+                    <lightning-progress-bar
+                        value={progressValue}
+                        size="large"
+                        variant="circular"
+                        aria-label={progressAriaLabel}
+                    ></lightning-progress-bar>
+
+                    <ol class="stage-list slds-list_horizontal slds-wrap slds-m-top_medium" aria-label="Opportunity stage path">
+                        <template for:each={stageItems} for:item="stage">
+                            <li key={stage.value} class={stage.className} aria-current={stage.ariaCurrent}>
+                                <span class="stage-marker" title={stage.label}></span>
+                                <span class="stage-label">{stage.label}</span>
+                                <span class="slds-assistive-text">{stage.assistiveText}</span>
+                            </li>
+                        </template>
+                    </ol>
+                </template>
+
+                <template lwc:elseif={isLoading}>
+                    <lightning-spinner alternative-text="Loading opportunity stage" size="small"></lightning-spinner>
+                </template>
+
+                <template lwc:else>
+                    <div class="slds-notify slds-notify_alert slds-alert_warning" role="alert">
+                        <span class="slds-assistive-text">Warning</span>
+                        <h2>{statusMessage}</h2>
+                    </div>
+                </template>
+            </template>
+
+            <template lwc:else>
+                <div class="slds-notify slds-notify_alert slds-alert_warning" role="alert">
+                    <span class="slds-assistive-text">Warning</span>
+                    <h2>This component requires an Opportunity record page.</h2>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>
