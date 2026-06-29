@@ -1,0 +1,45 @@
+<template>
+    <lightning-card title={cardTitle} icon-name="standard:opportunity">
+        <div class="slds-var-p-horizontal_medium slds-var-p-bottom_medium">
+            <template lwc:if={isLoading}>
+                <lightning-spinner alternative-text="Loading opportunity stage" size="small"></lightning-spinner>
+            </template>
+
+            <template lwc:elseif={hasError}>
+                <div class="slds-notify slds-notify_alert slds-alert_error" role="alert" aria-live="assertive">
+                    <span class="slds-assistive-text">Error</span>
+                    <h2>{errorMessage}</h2>
+                </div>
+            </template>
+
+            <template lwc:else>
+                <div class="stage-summary slds-grid slds-wrap slds-grid_align-spread slds-var-m-bottom_x-small">
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                        <p class="slds-text-title_caps">Current Stage</p>
+                        <p class="slds-text-heading_small">{currentStageLabel}</p>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-medium-text-align_right slds-var-m-top_x-small slds-medium-var-m-top_none">
+                        <p class="slds-text-title_caps">Progress</p>
+                        <p class="slds-text-heading_small">{progressLabel}</p>
+                    </div>
+                </div>
+
+                <lightning-progress-bar value={progressValue} size="large" variant={progressVariant}></lightning-progress-bar>
+
+                <p class="slds-text-body_small slds-var-m-top_x-small" aria-live="polite">
+                    {assistiveSummary}
+                </p>
+
+                <template lwc:if={showStageList}>
+                    <ol class="stage-list slds-list_horizontal slds-has-dividers_right slds-var-m-top_medium" aria-label="Opportunity stage progression">
+                        <template for:each={stageSteps} for:item="step">
+                            <li key={step.value} class={step.className} aria-current={step.ariaCurrent}>
+                                <span class="stage-marker" title={step.label}>{step.label}</span>
+                            </li>
+                        </template>
+                    </ol>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+</template>
