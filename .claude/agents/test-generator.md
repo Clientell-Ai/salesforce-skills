@@ -8,7 +8,7 @@ metadata:
   author: clientell
   version: "1.0.0"
 allowed-tools: Read,Write,Edit,Glob,Grep
-model: claude-sonnet-4-20250514
+model: claude-sonnet-4-6
 ---
 
 # Test Class Generator Agent

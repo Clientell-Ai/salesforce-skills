@@ -8,7 +8,7 @@ metadata:
   author: clientell
   version: "1.0.0"
 allowed-tools: Read,Write,Edit,Bash(sf *),Glob,Grep
-model: claude-sonnet-4-20250514
+model: claude-sonnet-4-6
 ---
 
 # Deploy Orchestrator Agent
